@@ -26,6 +26,7 @@ plt.figure(figsize=(3, 4))
 plt.scatter(y_test[:,0], regr.predict(X_test)[:,0])
 plt.xlabel('True')
 plt.ylabel('Prediction')
+plt.tight_layout()
 plt.savefig('brate.pdf')
 
 
@@ -33,6 +34,7 @@ plt.figure(figsize=(3, 4))
 plt.plot(regr.feature_importances_)
 plt.xticks(ticks=range(8), labels=['Ha', 'pHa', 'Hb', 'pHb', 'La', 'Lb', 'LotNumB', 'Amb'], rotation=90)
 plt.ylabel('Importance')
+plt.tight_layout()
 plt.savefig('fimport.pdf')
 
 
@@ -40,7 +42,10 @@ plt.savefig('fimport.pdf')
 plt.figure(figsize=(3, 4))
 plt.scatter(y_test[:,1], regr.predict(X_test)[:,1])
 plt.xlabel('True')
+plt.ylabel('Prediction')
+plt.tight_layout()
 plt.savefig('feature_imp.pdf')
+
 
 
 plt.show()
