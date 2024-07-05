@@ -30,9 +30,18 @@ plt.savefig('brate.pdf')
 
 
 plt.figure(figsize=(3, 4))
+plt.plot(regr.feature_importances_)
+plt.xticks(ticks=range(8), labels=['Ha', 'pHa', 'Hb', 'pHb', 'La', 'Lb', 'LotNumB', 'Amb'], rotation=90)
+plt.ylabel('Importance')
+plt.savefig('fimport.pdf')
+
+
+
+plt.figure(figsize=(3, 4))
 plt.scatter(y_test[:,1], regr.predict(X_test)[:,1])
 plt.xlabel('True')
-plt.ylabel('Prediction')
-plt.savefig('bratestd.pdf')
+plt.savefig('feature_imp.pdf')
+
+
 plt.show()
 # print(mse(regr.predict(X_test)[:,0], y_test[:,0])*100)
