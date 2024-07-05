@@ -44,4 +44,4 @@ plt.savefig('feature_imp.pdf')
 
 
 plt.show()
-# print(mse(regr.predict(X_test)[:,0], y_test[:,0])*100)
+print(mse(regr.predict(X_test)[:,0], y_test[:,0])*100)
