@@ -44,9 +44,9 @@ plt.scatter(y_test[:,1], regr.predict(X_test)[:,1])
 plt.xlabel('True')
 plt.ylabel('Prediction')
 plt.tight_layout()
-plt.savefig('feature_imp.pdf')
+plt.savefig('brate_std.pdf')
 
 
 
 plt.show()
-print(mse(regr.predict(X_test)[:,0], y_test[:,0])*100)
+print(mse(regr.predict(X_test)[:,0], y_test[:,0]))
